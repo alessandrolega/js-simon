@@ -6,3 +6,20 @@ let numbersArray = [];
 let numbersUser = []; 
 let numbersCorrect = []; 
 let correctNum = document.getElementById('correctNum');
+
+for(let i = 0; i < 5; i++){ 
+    
+    function randomNumber(){
+
+    let randomNumber = Math.floor(Math.random(1) * 100);
+    return randomNumber;
+
+    }
+
+    let casualNumber = randomNumber();
+
+    numbersArray.push(casualNumber)
+}
+
+console.log(numbersArray)
+
