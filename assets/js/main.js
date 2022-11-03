@@ -21,5 +21,26 @@ for(let i = 0; i < 5; i++){
     numbersArray.push(casualNumber)
 }
 
-console.log(numbersArray)
+document.getElementById('numbersRandom').innerHTML = `${numbersArray}`; 
+
+
+function hideElements(){
+        document.getElementById('numbersRandom').innerHTML = ''; 
+}
+
+function timePrompt(){ 
+    for(let k = 0; k < 5; k++){
+        let userPrompt = parseInt(prompt('Type Numbers!'))
+        numbersUser.push(userPrompt)    
+    }
+    document.getElementById('newNum').innerHTML = `${numbersUser}`;
+}
+
+setTimeout( function(){ 
+    hideElements();
+}, 3000 );
+
+setTimeout( function(){ 
+    timePrompt(); 
+}, 3100 );
 
