@@ -29,11 +29,13 @@ function hideElements(){
 }
 
 function timePrompt(){ 
-    for(let k = 0; k < 5; k++){
+    for(let y = 0; y < 5; y++){
         let userPrompt = parseInt(prompt('Type Numbers!'))
         numbersUser.push(userPrompt)    
     }
     document.getElementById('newNum').innerHTML = `${numbersUser}`;
+    
+    check();
 }
 
 setTimeout( function(){ 
@@ -43,4 +45,31 @@ setTimeout( function(){
 setTimeout( function(){ 
     timePrompt(); 
 }, 3100 );
+
+function check(){ 
+    for (let x = 0; x < numbersArray.length; x++){ 
+
+        for (let k = 0; k < numbersUser.length; k++){
+
+         if(numbersArray[x] == numbersUser[k]){ 
+
+            numbersCorrect.push(numbersUser[k]); 
+            
+
+         }
+
+      }
+
+    }
+console.log(numbersCorrect);
+    let controlCorrect = numbersCorrect.length; 
+
+    correctNum.innerHTML = `Hai inserito ${controlCorrect} numeri corretti su 5: ${numbersCorrect}` 
+
+}
+
+
+
+console.log(numbersArray)
+console.log(numbersUser)
 
